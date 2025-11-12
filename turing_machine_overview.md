@@ -37,6 +37,18 @@ Complexity theory is the field that categorizes problems based on the resources 
   * **P (Polynomial Time):** Problems solvable by a TM in a time proportional to a polynomial function of the input size (considered "easy" or tractable).  
   * **NP (Non-deterministic Polynomial Time):** Problems whose solutions can be *verified* by a TM in polynomial time. The central, unsolved question in computer science is whether $P = NP$. This is equivalent to asking: If a solution can be quickly checked, can it also be quickly found?
 
+## **The Busy Beaver Problem: Exploring the Limits of Complexity**
+
+While the Halting Problem proves that no single TM can predict if *all* TMs will halt, the **Busy Beaver (BB) problem** provides a concrete measure of complexity and non-computability.
+
+The Busy Beaver problem asks: **What is the maximum number of non-blank symbols (usually '1's) that a halting** $N$**\-state Turing Machine can write on an initially blank tape?**
+
+This maximum number is defined by the **Busy Beaver function**, $BB(N)$.
+
+* **Non-Computability:** The function $BB(N)$ grows faster than any computable function. In simple terms, for sufficiently large $N$, no general algorithm can calculate $BB(N)$ because doing so would require solving the Halting Problem for all TMs with $N$ states, which is impossible.  
+* **Usefulness:** The BB function serves as a vivid demonstration of the **boundary between the computable and the uncomputable**. It shows how immense complexity (in terms of execution time and written symbols) can emerge from the simplest finite set of rules. For instance, the 5-state Busy Beaver ($BB(5)$) is known to run for over 47 million steps before halting, highlighting how quickly a simple machine can generate astronomical complexity.
+
+
 ## **F\# as a Natural Fit for TM Emulation**
 
 Implementing the TM in a **functional language** like F\# is a remarkably elegant fit due to the core principles of functional programming:
