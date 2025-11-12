@@ -48,6 +48,18 @@ This maximum number is defined by the **Busy Beaver function**, $BB(N)$.
 * **Non-Computability:** The function $BB(N)$ grows faster than any computable function. In simple terms, for sufficiently large $N$, no general algorithm can calculate $BB(N)$ because doing so would require solving the Halting Problem for all TMs with $N$ states, which is impossible.  
 * **Usefulness:** The BB function serves as a vivid demonstration of the **boundary between the computable and the uncomputable**. It shows how immense complexity (in terms of execution time and written symbols) can emerge from the simplest finite set of rules. For instance, the 5-state Busy Beaver ($BB(5)$) is known to run for over 47 million steps before halting, highlighting how quickly a simple machine can generate astronomical complexity.
 
+## **The Quantum Distinction: Why the TM Model is Incomplete**
+
+While the Turing Machine defines the *ultimate* limits of computability for classical physics, it is **not sufficient to model a Quantum Computer (QC)**.
+
+The limitation stems from how TMs and QCs handle data and computation:
+
+1. **Classical vs. Quantum State:** The TM is inherently **discrete and deterministic** (or non-deterministic in its theoretical extensions). The tape contains only 0s or 1s, and at any moment, the machine is in a single, defined state. In contrast, a quantum computer uses **qubits**, which exist in a **superposition** of 0 and 1 simultaneously, and its operations are governed by continuous probability amplitudes.  
+2. **Efficiency, Not Feasibility:** A quantum computer can be theoretically **simulated** by a classical Turing Machine (because it is still a finite system adhering to the laws of physics), but that simulation is **exponentially slow**. For problems where quantum algorithms (like Shor's algorithm) provide an exponential speedup, the classical TM fails to capture the computational *efficiency* of the QC.
+
+This led to the proposal of the **Quantum Turing Machine (QTM)** by David Deutsch in 1985\. The QTM operates on a tape where each cell stores a superposition of values, and the transition function is defined by **unitary transformations** (a type of reversible, linear transformation used in quantum mechanics).
+
+The inability of the classical TM to efficiently model quantum phenomena suggests that the Church-Turing Thesis may need to be slightly refined to the **Strong Church-Turing Thesis**, which states that any physically realizable computation can be simulated *efficiently* by a classical Turing Machine. The exponential speedups offered by QCs are the primary challenge to this "strong" version of the thesis.
 
 ## **F\# as a Natural Fit for TM Emulation**
 
