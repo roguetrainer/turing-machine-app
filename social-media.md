@@ -19,6 +19,8 @@ For the implementation, we chose **F\#**. Its functional, immutable nature (usin
 
 🦫 Examples include the famous Busy Beaver Problem. 
 
-🐍 Plus for mainstream language folks there's python code here too. 
+🐍 Plus for mainstream language folks there's python code here too.
+
+🔗https://github.com/roguetrainer/turing-machine-app
 
 #ComputerScience #TuringMachine #FunctionalProgramming #FSharp #Algorithms #ComplexityTheory #SoftwareEngineering #BusyBeaverProblem 
