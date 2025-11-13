@@ -2,6 +2,8 @@
 
 This repository contains two distinct implementations of a Turing Machine (TM) emulator, built to explore the foundations of computer science, complexity theory, and functional programming.
 
+![TM](./Turing-machine.png)
+
 ## **🚀 Overview**
 
 The Turing Machine, a foundational mathematical model conceived by Alan Turing, defines the limits of what is computable. This project simulates its behavior in two different programming paradigms:
